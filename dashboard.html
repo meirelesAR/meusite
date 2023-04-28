@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        .navbar{
+            width: 100%;
+            height: 60px;
+            background-color: black;  
+            position: fixed;
+            display: flex;
+        }
+
+        .menu{
+            display: flex;
+            width: 150px;
+            height: 60px;
+            margin-left: 25px;
+            
+        }
+
+        .perfil{
+            width: 50px;
+            height: 50px;
+            background-color: aliceblue;
+            border-radius: 25px;
+            margin: 5px;
+            margin-left: 75%;
+            float: right;
+        }
+
+        .perfil-btn{
+            width: 55px;
+            height: 55px;
+            border-radius: 25px;
+            background-image: url("./user.png");
+            background-size: cover;
+        }
+
+        .lista-item{
+            color: aliceblue;
+            width: 100px;
+            height: 60px;
+            text-align: center;
+        
+        }
+        .lista-item a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .lista{
+            display: flex;
+            list-style: none;
+            margin-top: 20px;
+            
+        }
+
+        .logo{
+            width: 50px;
+            height: 50px;
+            background-color: aliceblue;
+            border-radius: 25px;
+            margin: 5px;
+            margin-left: 20px;
+        }
+        .modal{
+            margin-top: 70px;    
+            position: absolute;
+            width: 100%;
+            display: flex;
+           
+        }
+
+        .modal-item{
+            width: 400px;
+            height: 500px;
+            border: 1px solid #ddd;
+            margin-left: 10px;
+            text-align: center;
+            border-radius: 10px;
+            color: rgba(80, 79, 79, 0.596);
+            
+        }
+
+        .modal-item img{
+            width: 390px;
+            height: 300px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        
+        }
+        .modal-item button{
+            width: 200px;
+            height: 45px;
+            margin-top: 20px;
+            background-color: rgb(240, 79, 15);
+            border: none;
+            color: #ddd;
+            font-weight: bold;
+            
+        }
+
+    </style>
+</head>
+
+<body >
+    <div class="navbar"> <!-- Navbar, sempre quando criar um menu superior de informações, logo marca, user, menu naveg -->
+        <div class="logo">
+            
+        </div>
+
+        <div class="menu">
+            <ol class="lista">
+                <li class="lista-item"><a href="#">Home</a></li>
+                <li class="lista-item"><a href="#">Contato</a></li>
+                <li class="lista-item"><a href="#">Sobre</a></li>
+            </ol>
+        </div>
+
+        <div class="perfil">
+            <button class="perfil-btn"></button>
+
+
+
+        </div>
+
+    </div>
+
+    <div class="conteudo">
+        <div class="modal">
+            <div class="modal-item">
+                <h2>Criação de Sites</h2>
+                <img src="./CRIACAO-SITE.png">
+                <p>Criamos sites com rapidez e eficiencia. Entre em contato e faça seu orçamento.</p>
+                <button onclick="direcionaWhatsapp()">Nosso Contato</button>
+
+            </div>
+                
+            <div class="modal-item">
+                <h2>Criação de Aplicativos</h2>
+                <img src="./APPS-CRIACAO.png">
+                <p>Criamos sites com rapidez e eficiencia. Entre em contato e faça seu orçamento.</p>
+                <button onclick="direcionaWhatsapp()">Nosso Contato</button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script>
+        function direcionaWhatsapp(){
+            window.location.href = "https://wa.me/5593992138900?text=Ol%C3%A1%2C+estamos+interessados+em+seus+servi%C3%A7os.+"
+
+        }
+    </script>
+    
+</body>
+</html>

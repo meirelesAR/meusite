@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+
+    <style>
+        .conteiner{
+            width: 350px;
+            height: 250px;
+            box-shadow: 2px 1px 0px 0px rgba(235, 229, 229, 0.404);
+            -webkit-box-shadow: 2px 1px 0px 0px rgba(235, 229, 229, 0.404);
+            -moz-box-shadow: 2px 1px 0px 0px rgba(235, 229, 229, 0.404);
+            margin-top: 80px;
+            border: 1px solid rgba(221, 212, 212, 0.75);
+            background-color: rgb(89, 180, 233);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 20px;
+        }
+
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .item{
+            
+            padding: 10px;
+            padding-top: 0px;
+
+        }
+        .item-texto{
+            font-size: 20px;
+            margin: 0px;
+            padding: 0px;
+            color: aliceblue;
+        }
+        input{
+            box-shadow: 2px 1px 11px 0px rgba(235, 229, 229, 0.75);
+            -webkit-box-shadow: 2px 1px 11px 0px rgba(235, 229, 229, 0.75);
+            -moz-box-shadow: 2px 1px 11px 0px rgba(235, 229, 229, 0.75);
+            border: 1px solid rgba(235, 229, 229, 0.404);
+        }
+
+        .login{
+            width: 160px;
+            height: 25px;
+            background-color: rgba(86, 99, 14, 0.897);
+            border: none;
+            color: aliceblue;
+
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <div class="conteiner">
+        <label class="item"> 
+            <p class="item-texto">usuario</p>
+            <input type="text" id="user-id">
+        </label>
+
+        <label class="item"> 
+            <p class="item-texto">senha</p>
+            <input type="text" id="senha-id">
+        </label>
+
+        <label class="item"> 
+            <button class="login" onclick="login()">login</button>
+
+            
+        </label>
+
+    </div>
+
+    <script>
+    
+    let usuarioDb = "Adriano"
+    let senhaDb = "1212"
+
+    function login(){
+        let usuario = document.getElementById("user-id").value   
+        let senha = document.getElementById("senha-id").value
+
+        if (usuario == usuarioDb && senha == senhaDb){
+            window.location.href="/dashboard.html"
+        
+
+        }
+        
+    
+
+    }
+
+
+    </script>
+
+
+</body>
+</html>
